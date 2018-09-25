@@ -1,6 +1,9 @@
 {% extends 'base/base.html' %} 
-{% load static %} 
+{% load sass_tags %} 
+
+
 {% block content %}
+<link rel="stylesheet" href="{% sass_src "styles/projects_list.sass" %}">
 <ul>
     <h2>
         Kickstarter Projects
@@ -8,14 +11,33 @@
     <rows>
         {% for project in projects %}
         <li>
-            <div class="record">
-                <h2>{{project.name}}</h2>
+            <div class="record"> 
+                <a href= "{% url "projects_detail" pk=project.id %}"><h2>{{ project.name }} </h2></a>
                 <h3>{{project.category}}</h3>
                 <div class="successfully_funded">
                     <p>{{project.pledged}}</p>
                 </div>
             </div>
         </li>
+        {% endfor%}
     </rows>
 </ul>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if projects.has_previous %}
+        <a href="?page=1">&laquo; first</a>
+        <a href="?page={{ projects.previous_page_number }}">previous</a>
+        {% endif %}
+    
+        <span class="current">
+        Page {{ projects.number }} of {{ projects.paginator.num_pages }}.
+        </span>
+    
+        {% if projects.has_next %}
+        <a href="?page={{ projects.next_page_number }}">next</a>
+        <a href="?page={{ projects.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>      
 {% endblock %}

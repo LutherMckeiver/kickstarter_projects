@@ -9,6 +9,9 @@ pandas = "*"
 sqlalchemy = "*"
 "psycopg2-binary" = "*"
 django-redis = "*"
+libsass = "*"
+django-compressor = "*"
+django-sass-processor = "*"
 
 [dev-packages]
 
