@@ -1,22 +1,24 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html>
     <head>
     </head>
-
     <header>
-        <nav>
-        </nav>
+            <nav>
+              <h1>
+                Title goes here
+              </h1>
+                <ul>                  
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>                       
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
     </header>
-
     <main>
         {% block content %}
-        <h3> Welcome to the page </h3>
         {% endblock %}
     </main>
-
     <footer>
     </footer>
-
-</html>

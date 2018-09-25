@@ -8,6 +8,7 @@ django = "*"
 pandas = "*"
 sqlalchemy = "*"
 "psycopg2-binary" = "*"
+django-redis = "*"
 
 [dev-packages]
 
