@@ -6,15 +6,9 @@ import os
 csv_data = pd.read_csv('./assets/ks-projects-201801.csv')
 df = pd.DataFrame(csv_data)
 
-# Adjust NaN values in each column, and generally clean data set
-# df['id'] = df['Unnamed: 0']
-# df['kickstarter_id'] = df['ID']
-# df['usd_pledged'] = df['usd pledged']
-# del df['usd pledged']
-# del df['ID']
-# del df['Unnamed: 0']
 
-df['ID'] = df['ID'].fillna(0)
+df['kickstarter_id'] = df['ID'].fillna(0)
+del df['ID']
 df['name'] = df['name'].fillna('unknown')
 df['category'] = df['category'].fillna('unknown')
 df['main_category'] = df['main_category'].fillna('unknown')

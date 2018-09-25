@@ -1,20 +1,35 @@
-{% extends 'base/base.html' %}
-{% load static %}
+{% extends 'base/base.html' %} 
+{% load sass_tags %} 
 
 {% block content %}
-
-<h2>Welcome to the detail page</h2>
-<h3>Name: {{ project.name }}</h3>
-<p>Main Category: {{ project.main_category }}</p>
-<p>Category: {{ project.category }}</p>
-<p>Currency: {{ project.currency }}</p>
-<p>Deadline: {{ project.deadline }}</p>
-<p>Goal: {{ project.goal }}</p>
-<p>Launched: {{ project.launched }}</p>
-<p>Pledged: {{ project.pledged }}</p>
-<p>State: {{ project.state }}</p>
-<p>Backers: {{ project.backers }}</p>
-<p>country: {{ project.country }}</p>
-<p>USD Pledged: {{ project.usd_pledged }}</p>
-
+<link rel="stylesheet" href="{% sass_src "styles/projects_detail.sass" %}">
+<ul>
+    <h1>
+        {{ project.name }}
+    </h1>
+    <li>
+        <h2>{{ project.category }}</h2>
+        <h3>{{ project.main_category }}</h3>
+    </li>
+    <li>
+        <h3>{{ project.country }}</h3>
+        <h4>{{ project.currency }}</h4>
+    </li>
+    <li>
+        <h3>Goal: ${{ project.goal }}</h3>
+        <h3>Pledged:{{ project.pledged }}</h3>
+        <h5>({{ project.usd_pledged }} USD)</h5>
+    </li>
+    <li>
+        <h3>Backers: {{ project.backers }}</h3>
+        <h3>Status: {{ project.state }}</h3>
+    </li>
+    <li>
+        <h3>Launched: {{ project.launched }}</h3>
+        <h3>Deadline: {{ project.deadline }}</h3>
+    </li>
+    <li class="back_button_li">
+        <div class="back_button">back</div>
+    </li>
+</ul>
 {% endblock content %}
