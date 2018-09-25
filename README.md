@@ -1,15 +1,15 @@
 # Kickstarter Project
 Contributors:
-Andrew
-Luther
-Micheal
+Andrew Baik
+Luther McKeiver
+Michael Sklepowich
 
 
-# Setup all config from the Docker
+## Setup all config from the Docker
 docker-compose up --build &
 
-# Enter the web application bash
+## Enter the web application bash
 docker exec -it kickstarter_web bash
 
-# Seed data crom .csv to postgres container
+## Seed data crom .csv to postgres container
 python3 load.db.py
