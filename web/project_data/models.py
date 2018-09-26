@@ -2,6 +2,8 @@ from django.db import models
 
 
 class Project(models.Model):
+    """ Database table converting from .csv and seed into postgres
+    """
     kickstarter_id = models.IntegerField()
     name = models.CharField(max_length=1024)
     category = models.CharField(max_length=1024)

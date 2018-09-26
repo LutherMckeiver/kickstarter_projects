@@ -2,10 +2,9 @@ from sqlalchemy import create_engine
 import pandas as pd
 import os
 
-
+# Filtering empty spaces from assets/.csv file and seed into postgres db
 csv_data = pd.read_csv('./assets/ks-projects-201801.csv')
 df = pd.DataFrame(csv_data)
-
 
 df['kickstarter_id'] = df['ID'].fillna(0)
 del df['ID']

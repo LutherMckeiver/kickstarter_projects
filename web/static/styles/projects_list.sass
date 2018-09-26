@@ -1,0 +1,56 @@
+header 
+  font-family: 'Helvetica', 'Arial', sans-serif
+  background: blue
+  width: 100%
+  nav
+    float: left
+    width: 100%
+    background: #999999
+    
+    h1
+      font-size: 2em
+      float: left
+      padding: 15px
+    ul
+      border-radius: 5px
+      margin: 20px
+      float: right
+      background: #777777
+      
+    li
+      margin: 20px
+      float: left
+      list-style-type: none
+    
+    a 
+      display: block
+      padding: 8px    
+
+
+main
+  font-family: 'Helvetica', 'Arial', sans-serif
+  width: 90%
+  margin: 0 auto
+  ul
+    display: inline-block
+    width: 100%
+    li
+      &:hover 
+        background: #666666
+        color: #dddddd
+      cursor: pointer
+      border-radius: 15px
+      width: 30%
+      background: #777777
+      margin: 10px
+      padding: 5px
+      display: inline-block
+      .record
+        list-style-type: none
+        text-align: left
+        .successfully_funded
+          width: 30%
+          text-align: center
+          border-radius: 10px
+          background: #555555
+          float: right
