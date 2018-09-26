@@ -17,31 +17,38 @@ Following features are implemented in the web app:
 
 ## Quick Start
 How to launch this application from your local machine:
+
+### clone the repository
 ```py
-## clone the repository
 git clone https://github.com/LutherMckeiver/kickstarter_projects.git
-
-## Create a .env file in the root of repository with following environment variables defined
-ALLOWED_HOSTS
-SECRET_KEY
-DB_NAME
-DB_HOST
-DB_USER
-DEBUG
-DB_HOST
-
-## Setup all config from the Docker
+```
+### Create a .env file in the root of repository with following environment variables defined
+```py
+ALLOWED_HOSTS=
+SECRET_KEY=
+DB_NAME=
+DB_HOST=
+DB_USER=
+DEBUG=
+DB_HOST=
+```
+### Setup all config from the Docker
+```py
 docker-compose up --build &
-
-## Enter the web application bash
+```
+### Enter the web application bash
+```py
 docker exec -it kickstarter_web bash
-
-## Seed data crom .csv to postgres container
+```
+### Seed data from .csv to postgres container
+```py
 python3 load.db.py
-
-## Open the web browser with one of the following URLs
+```
+### Open the web browser with one of the following URLs (as defined in ALLOWED_HOSTS)
+```
 http://127.0.0.1:8000/
 http://0.0.0.0:8000/
 http://localhost:8000/
 ```
+
 
