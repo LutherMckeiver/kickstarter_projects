@@ -11,6 +11,8 @@ CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
 
 @cache_page(CACHE_TTL)
 def projects_list_view(request):
+    """ Retreives list of all projects loaded from postgres
+    """
     project_queries = get_list_or_404(Project)
     
     paginator = Paginator(project_queries, 20)
@@ -24,6 +26,8 @@ def projects_list_view(request):
 
 
 def projects_detail_view(request, pk):
+    """ Retreive a selected object from postgres for display purpose
+    """
     project = get_object_or_404(Project, id=pk)
     context = {
         'project': project,
