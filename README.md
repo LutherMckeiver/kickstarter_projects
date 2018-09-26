@@ -1,8 +1,8 @@
 # Kickstarter Project
 
 ## Contributors:
-- Andrew Baik,
-- Luther McKeiver &
+- Andrew Baik
+- Luther McKeiver 
 - Michael Sklepowich
 
 
