@@ -18,7 +18,7 @@ Following features are implemented in the web app:
 ## Quick Start
 How to launch this application from your local machine:
 
-### clone the repository
+### Clone the repository
 ```py
 git clone https://github.com/LutherMckeiver/kickstarter_projects.git
 ```
@@ -33,11 +33,11 @@ DEBUG=
 DB_HOST=
 ```
 ### Setup all config from the Docker
-```py
+```
 docker-compose up --build &
 ```
 ### Enter the web application bash
-```py
+```
 docker exec -it kickstarter_web bash
 ```
 ### Seed data from .csv to postgres container
