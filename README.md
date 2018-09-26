@@ -6,6 +6,15 @@
 - Michael Sklepowich
 
 
+## Summary
+Kickstarter application used Django web framework inside the Docker and container environment. 
+Following features are implemented in the web app:
+- CSV file data converted and seeded into POSTGRES container
+- Redis cache utilized for loading time
+- Pagination for dataload efficiency
+- SASS styling integration.
+
+
 ## Quick Start
 How to launch this application from your local machine:
 ```py
